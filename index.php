@@ -1,6 +1,7 @@
 <?php
 
 require_once("config.php");
+
 //Loads one user only.
 /* $root = new Usuario();
 $root->loadById(7); */
@@ -18,8 +19,23 @@ echo json_encode($search); */
 
 //lOADS AN USER USING THE LOGIN
 
-$usuario = new Usuario();
+/* $usuario = new Usuario();
 $usuario->login("user", "12345");
+
+echo $usuario;
+ */
+
+/*  $aluno = new Usuario("aluno", "@alun0"); //Creating a new user
+
+ $aluno->insert();
+
+ echo $aluno; */
+
+ $usuario = new Usuario();
+
+ $usuario->loadById(8);
+
+ $usuario->update("professor", "!$%&&");
 
 echo $usuario;
 
