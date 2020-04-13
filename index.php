@@ -2,41 +2,40 @@
 
 require_once("config.php");
 
-//Loads one user only.
+//LOADS ONE USER ONLY
 /* $root = new Usuario();
 $root->loadById(7); */
 //echo $root;
 
-//Loads a List of users
+//LOADS A LIST OF USERS
 /* $lista = Usuario::getList();
-
 echo json_encode($lista); */
 
 //LOADS A USER LIST BY LOGIN
 /* $search = Usuario::search("jo");
-
 echo json_encode($search); */
 
 //lOADS AN USER USING THE LOGIN
-
 /* $usuario = new Usuario();
 $usuario->login("user", "12345");
-
 echo $usuario;
  */
 
-/*  $aluno = new Usuario("aluno", "@alun0"); //Creating a new user
-
+ //CREATING NEW USER
+/*  $aluno = new Usuario("aluno", "@alun0"); 
  $aluno->insert();
-
  echo $aluno; */
 
- $usuario = new Usuario();
-
+ //TO CHANGE AN USER
+/*  $usuario = new Usuario();
  $usuario->loadById(8);
-
  $usuario->update("professor", "!$%&&");
+echo $usuario; */
 
+//DELETE AN USER
+$usuario = new Usuario();
+$usuario->loadById(7);
+$usuario->delete();
 echo $usuario;
 
 ?>
